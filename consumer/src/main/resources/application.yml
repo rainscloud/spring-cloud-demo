@@ -1,0 +1,18 @@
+#port
+server:
+  port: 8301
+
+#eureka
+eureka:
+  #默认显示localhost,配置显示出ip
+  instance:
+    appname: consumer
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    #默认心跳时间
+    lease-renewal-interval-in-seconds: 30
+    #删除时间间隔
+    lease-expiration-duration-in-seconds: 90
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka

@@ -4,8 +4,20 @@ server:
 
 #eureka
 eureka:
+  #实例名默认localhost
+  instance:
+    hostname: eureka-server
   client:
     #是否将自己注册到注册中心，默认true
     register-with-eureka: false
     #是否从server获取注册的服务信息
     fetch-registry: false
+  server:
+    #自我保护机制默认true，心跳失败比例在15分钟低于85%就不剔除client
+    enable-self-preservation: true
+    #保护机制的阈值，默认是0.85
+    renewal-percent-threshold: 0.85
+    #清理无效节点时间间隔，默认60秒
+    eviction-interval-timer-in-ms: 60000
+    #Eureka服务器获取不到集群里对等服务器上的实例时，需要等待的时间，单位为毫秒
+    wait-time-in-ms-when-sync-empty: 0

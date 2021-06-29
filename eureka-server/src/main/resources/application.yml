@@ -1,0 +1,11 @@
+#port
+server:
+  port: 8761
+
+#eureka
+eureka:
+  client:
+    #是否将自己注册到注册中心，默认true
+    register-with-eureka: false
+    #是否从server获取注册的服务信息
+    fetch-registry: false

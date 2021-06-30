@@ -1,25 +1,19 @@
 #port
 server:
-  port: 8202
+  port: 8203
 
 #eureka
 eureka:
-  #榛樿鏄剧ずlocalhost,閰嶇疆鏄剧ず鍑篿p
+  #默认显示localhost,配置显示出ip
   instance:
-    appname: producer
+    appname: producer-hystrix
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
-    #榛樿蹇冭烦鏃堕棿
+    #默认心跳时间
     lease-renewal-interval-in-seconds: 30
-    #鍒犻櫎鏃堕棿闂撮殧
+    #删除时间间隔
     lease-expiration-duration-in-seconds: 90
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
 
-spring:
-
-
-
-  application:
-    name: producer

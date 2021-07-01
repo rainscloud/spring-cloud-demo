@@ -4,14 +4,14 @@ server:
 
 #eureka
 eureka:
-  #Ä¬ÈÏÏÔÊ¾localhost,ÅäÖÃÏÔÊ¾³öip
+  #Ä¬ï¿½ï¿½ï¿½ï¿½Ê¾localhost,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ip
   instance:
-    appname: consumer2
+    appname: consumer-openfeign
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
-    #Ä¬ÈÏĞÄÌøÊ±¼ä
+    #Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
     lease-renewal-interval-in-seconds: 30
-    #É¾³ıÊ±¼ä¼ä¸ô
+    #É¾ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
     lease-expiration-duration-in-seconds: 90
   client:
     serviceUrl:

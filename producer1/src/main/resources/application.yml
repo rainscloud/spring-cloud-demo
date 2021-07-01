@@ -1,20 +1,17 @@
 #port
 server:
   port: 8201
-#application-name ·şÎñÃû£¬ÓÅÏÈ¼¶±Èeureka-instance-name¸ß
+# æœåŠ¡åï¼šapplication-name æ¯”instance-appname ä¼˜å…ˆçº§æ›´é«˜
 spring:
   application:
     name: producer
-#eureka
+
 eureka:
-  #Ä¬ÈÏÏÔÊ¾localhost,ÅäÖÃÏÔÊ¾³öip
   instance:
     appname: producer
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
-    #Ä¬ÈÏĞÄÌøÊ±¼ä
     lease-renewal-interval-in-seconds: 30
-    #É¾³ıÊ±¼ä¼ä¸ô
     lease-expiration-duration-in-seconds: 90
   client:
     serviceUrl:

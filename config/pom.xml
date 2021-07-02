@@ -5,17 +5,17 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.12.RELEASE</version>
+        <version>2.5.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>hystrix</artifactId>
+    <artifactId>config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>hystrix</name>
-    <description>Demo project for Hystrix</description>
+    <name>config</name>
+    <description>Demo project for Config Server</description>
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Hoxton.SR11</spring-cloud.version>
+        <spring-cloud.version>2020.0.3</spring-cloud.version>
     </properties>
     <dependencies>
         <dependency>
@@ -24,41 +24,13 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-netflix-hystrix</artifactId>
-            <version>2.2.8.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>com.netflix.hystrix</groupId>
-            <artifactId>hystrix-javanica</artifactId>
-        </dependency>
-        <!--actuator监控信息-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.netflix.hystrix</groupId>
-            <artifactId>hystrix-metrics-event-stream</artifactId>
         </dependency>
     </dependencies>
     <dependencyManagement>

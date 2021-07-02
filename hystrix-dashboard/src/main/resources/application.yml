@@ -1,0 +1,7 @@
+#port
+server:
+  port: 8400
+#dashboard
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"

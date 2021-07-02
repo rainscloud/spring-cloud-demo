@@ -1,6 +1,6 @@
 #port
 server:
-  port: 8500
+  port: 8501
 #name
 spring:
   application:
@@ -9,10 +9,9 @@ spring:
     config:
       server:
         git:
-          uri:
-          username: rainscloud
+          uri: https://github.com.cnpmjs.org/rainscloud/spring-cloud-demo.git
+          username:
           password:
-
 eureka:
   instance:
     prefer-ip-address: true

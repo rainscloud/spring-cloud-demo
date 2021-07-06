@@ -1,17 +1,33 @@
 #port
 server:
   port: 8501
-#name
+#配置name
 spring:
   application:
     name: config-server
+  #配置yml的git路径
   cloud:
     config:
       server:
         git:
-          uri: https://github.com.cnpmjs.org/rainscloud/spring-cloud-demo.git
-          username:
+          uri: https://gitee.com/rainscloud/spring-cloud-demo.git
+          username: rainscloud
           password:
+  rabbitmq:
+    host: 192.168.50.90 # rabbitmq主机
+    port: 5672      # rabbitmq端口，注意是5672而不是15672
+    username: admin # 用户名
+    password: admin # 密码
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    busrefresh:
+      enabled: true
+
 eureka:
   instance:
     prefer-ip-address: true
@@ -21,3 +37,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+
+
+
+
+

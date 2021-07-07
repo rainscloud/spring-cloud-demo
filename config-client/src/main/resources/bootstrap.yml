@@ -26,9 +26,9 @@ management:
   endpoints:
     web:
 #      默认是/actuator前缀
-      base-path: /
+#      base-path: /
       exposure:
 #        include: "*",* 是放行所有
-        include: refresh,health,info
+        include: refresh,health,info,busrefresh
 
 
